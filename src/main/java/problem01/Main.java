@@ -7,10 +7,18 @@ public class Main {
 	}
 
 	public static void findMaxProduct(int[] arr) {
-		
-		//
-		// 코드를 완성 하십시오.
-		//
-		
+		int max=0;
+		int maxone=0;
+		int maxtwo=0;
+		for(int i=0;i<arr.length-1;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]*arr[j]>max) {
+					max=arr[i]*arr[j];
+					maxone=arr[i];
+					maxtwo=arr[j];
+				}
+			}
+		}
+		System.out.println("["+maxone+","+maxtwo+"]");
 	}
 }
